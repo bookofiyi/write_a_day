@@ -1,4 +1,4 @@
-# write_a_day
+# Write-A-Day
 
 A new Flutter project.
 
