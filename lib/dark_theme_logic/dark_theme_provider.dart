@@ -1,7 +1,7 @@
 // ignore_for_file: unnecessary_getters_setters
 
 import 'package:flutter/cupertino.dart';
-import 'package:write_a_day/logic/dark_theme_preference.dart';
+import 'package:write_a_day/dark_theme_logic/dark_theme_preference.dart';
 
 class DarkThemeProvider with ChangeNotifier {
   DarkThemePreference darkThemePreference = DarkThemePreference();
