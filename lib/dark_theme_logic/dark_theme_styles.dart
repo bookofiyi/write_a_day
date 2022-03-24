@@ -6,6 +6,29 @@ class Styles {
     return ThemeData(
       primarySwatch: Colors.red,
       primaryColor: isDarkTheme ? Colors.black : Colors.white,
+      fontFamily: 'San Francisco',
+      textTheme: TextTheme(
+        // diary entry title text
+        headline1: TextStyle(
+          color: isDarkTheme ? Colors.white : Colors.black,
+          fontSize: 25,
+          fontWeight: FontWeight.bold,
+        ),
+
+        // diary entry body text
+        bodyText1: TextStyle(
+          color: isDarkTheme ? Colors.white : Colors.black,
+          fontSize: 15,
+          overflow: TextOverflow.ellipsis,
+        ),
+
+        // date text style
+        bodyText2: TextStyle(
+          color: isDarkTheme ? Colors.grey[700] : Colors.grey[50],
+          fontSize: 10,
+        ),
+      ),
+      // typography: Typography
       backgroundColor: isDarkTheme ? Colors.black : const Color(0xFFF1F5FB),
       indicatorColor:
           isDarkTheme ? const Color(0xff0E1D36) : const Color(0xffCBDCF8),
@@ -27,7 +50,7 @@ class Styles {
                 : const ColorScheme.light(),
           ),
       appBarTheme: const AppBarTheme(
-        elevation: 0.0,
+        elevation: 5.0,
       ),
     );
   }
