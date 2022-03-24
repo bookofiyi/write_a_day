@@ -1,28 +1,51 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
+import 'package:write_a_day/dark_theme_logic/dark_theme_provider.dart';
+import 'package:write_a_day/dark_theme_logic/dark_theme_styles.dart';
 import 'package:write_a_day/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  DarkThemeProvider themeChangeProvider = DarkThemeProvider();
+
+  @override
+  void initState() {
+    super.initState();
+    getCurrentAppTheme();
+  }
+
+  void getCurrentAppTheme() async {
+    themeChangeProvider.darkTheme =
+        await themeChangeProvider.darkThemePreference.getTheme();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Write-Away',
-      theme: ThemeData.light().copyWith(
-        primaryColor: Colors.red,
+    return ChangeNotifierProvider(
+      create: (_) {
+        return themeChangeProvider;
+      },
+      child: Consumer<DarkThemeProvider>(
+        builder: (BuildContext context, value, child) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            theme: Styles.themeData(themeChangeProvider.darkTheme, context),
+            home: const HomePage(),
+          );
+        },
       ),
-      darkTheme: ThemeData.dark(),
-      // theme: ThemeData(
-      //   primarySwatch: Colors.blue,
-      //   fontFamily: 'San Fransisco',
-      // ),
-      home: const HomePage(),
     );
   }
 }
