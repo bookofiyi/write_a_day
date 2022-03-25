@@ -29,7 +29,7 @@ class Styles {
         ),
       ),
       // typography: Typography
-      backgroundColor: isDarkTheme ? Colors.black : const Color(0xFFF1F5FB),
+      backgroundColor: isDarkTheme ? Colors.black : const Color(0xffEFEEF3),
       indicatorColor:
           isDarkTheme ? const Color(0xff0E1D36) : const Color(0xffCBDCF8),
       hintColor:
