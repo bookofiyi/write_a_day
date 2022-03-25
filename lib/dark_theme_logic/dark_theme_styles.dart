@@ -6,7 +6,7 @@ class Styles {
     return ThemeData(
       primarySwatch: Colors.red,
       primaryColor: isDarkTheme ? Colors.black : Colors.white,
-      fontFamily: 'San Francisco',
+      fontFamily: 'Poppins',
       textTheme: TextTheme(
         // diary entry title text
         headline1: TextStyle(
