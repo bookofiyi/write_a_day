@@ -24,7 +24,7 @@ class Styles {
 
         // date text style
         bodyText2: TextStyle(
-          color: isDarkTheme ? Colors.grey[700] : Colors.grey[50],
+          color: isDarkTheme ? Colors.white70 : Colors.grey[700],
           fontSize: 10,
         ),
       ),
