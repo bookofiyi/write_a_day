@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                     boxShadow: darkModeActive
                         ? const [
                             BoxShadow(
-                              color: Colors.grey,
+                              color: Color(0xff2C2C2A),
                               spreadRadius: 4,
                               blurRadius: 10,
                               offset: Offset(0, 0),
@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                           ]
                         : const [
                             BoxShadow(
-                              color: Color(0xff2C2C2A),
+                              color: Color(0xFFF9FAFF),
                               spreadRadius: 4,
                               blurRadius: 10,
                               offset: Offset(0, 0),

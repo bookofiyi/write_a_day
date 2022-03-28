@@ -29,7 +29,8 @@ class Styles {
         ),
       ),
       // typography: Typography
-      backgroundColor: isDarkTheme ? Colors.black : const Color(0xffEFEEF3),
+      backgroundColor:
+          isDarkTheme ? const Color(0xff222222) : const Color(0xffEFEEF3),
       indicatorColor:
           isDarkTheme ? const Color(0xff0E1D36) : const Color(0xffCBDCF8),
       hintColor:

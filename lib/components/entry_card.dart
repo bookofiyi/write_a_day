@@ -29,7 +29,7 @@ class _EntryCardState extends State<EntryCard>
       vsync: this,
       duration: const Duration(milliseconds: 50),
     );
-    _scale = Tween<double>(begin: 1, end: 0.8)
+    _scale = Tween<double>(begin: 1, end: 0.95)
         .animate(CurvedAnimation(parent: _controller!, curve: Curves.ease));
   }
 
@@ -52,12 +52,13 @@ class _EntryCardState extends State<EntryCard>
       child: ScaleTransition(
         scale: _scale!,
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 8.0),
           child: MaterialButton(
             onPressed: () {},
             minWidth: double.infinity,
             elevation: 3,
-            color: widget.darkModeActive ? Colors.grey : Colors.white,
+            color:
+                widget.darkModeActive ? const Color(0xff2C2C2A) : Colors.white,
             padding: EdgeInsets.zero,
             child: Padding(
               padding: const EdgeInsets.fromLTRB(16.0, 8, 16.0, 16.0),
