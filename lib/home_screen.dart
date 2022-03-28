@@ -36,11 +36,12 @@ class _HomePageState extends State<HomePage> {
                     onPressed: () {},
                     icon: const Icon(Icons.edit),
                   ),
-                  Text(
-                    'Write-Away',
-                    style: Styles.themeData(darkModeActive, context)
-                        .textTheme
-                        .headline1,
+                  SvgPicture.asset(
+                    'assets/images/diaree-logo.svg',
+                    color: darkModeActive ? Colors.white : Colors.black,
+                    height: 50,
+                    width: 50,
+                    semanticsLabel: 'Diaree Logo',
                   ),
                   IconButton(
                     onPressed: () {
