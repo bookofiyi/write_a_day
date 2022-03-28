@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:write_a_day/components/entry_card.dart';
 import 'package:write_a_day/dark_theme_logic/dark_theme_provider.dart';
 import 'package:write_a_day/dark_theme_logic/dark_theme_styles.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
