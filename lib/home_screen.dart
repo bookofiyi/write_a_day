@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:write_a_day/components/entry_card.dart';
 import 'package:write_a_day/dark_theme_logic/dark_theme_provider.dart';
-import 'package:write_a_day/dark_theme_logic/dark_theme_styles.dart';
+// import 'package:write_a_day/dark_theme_logic/dark_theme_styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatefulWidget {
@@ -65,7 +65,8 @@ class _HomePageState extends State<HomePage> {
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: const BorderRadius.all(Radius.circular(15)),
-                    color: darkModeActive ? Colors.grey[850] : Colors.white,
+                    color:
+                        darkModeActive ? const Color(0xff2C2C2A) : Colors.white,
                     boxShadow: darkModeActive
                         ? const [
                             BoxShadow(
@@ -77,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                           ]
                         : const [
                             BoxShadow(
-                              color: Color(0xFFF9FAFF),
+                              color: Color(0xff2C2C2A),
                               spreadRadius: 4,
                               blurRadius: 10,
                               offset: Offset(0, 0),
@@ -106,18 +107,54 @@ class _HomePageState extends State<HomePage> {
                 physics: const BouncingScrollPhysics(),
                 padding: EdgeInsets.zero,
                 children: [
-                  EntryCard(darkModeActive: darkModeActive),
-                  EntryCard(darkModeActive: darkModeActive),
-                  EntryCard(darkModeActive: darkModeActive),
-                  EntryCard(darkModeActive: darkModeActive),
-                  EntryCard(darkModeActive: darkModeActive),
-                  EntryCard(darkModeActive: darkModeActive),
-                  EntryCard(darkModeActive: darkModeActive),
-                  EntryCard(darkModeActive: darkModeActive),
-                  EntryCard(darkModeActive: darkModeActive),
-                  EntryCard(darkModeActive: darkModeActive),
-                  EntryCard(darkModeActive: darkModeActive),
-                  EntryCard(darkModeActive: darkModeActive),
+                  EntryCard(
+                    darkModeActive: darkModeActive,
+                    onPress: () {},
+                  ),
+                  EntryCard(
+                    darkModeActive: darkModeActive,
+                    onPress: () {},
+                  ),
+                  EntryCard(
+                    darkModeActive: darkModeActive,
+                    onPress: () {},
+                  ),
+                  EntryCard(
+                    darkModeActive: darkModeActive,
+                    onPress: () {},
+                  ),
+                  EntryCard(
+                    darkModeActive: darkModeActive,
+                    onPress: () {},
+                  ),
+                  EntryCard(
+                    darkModeActive: darkModeActive,
+                    onPress: () {},
+                  ),
+                  EntryCard(
+                    darkModeActive: darkModeActive,
+                    onPress: () {},
+                  ),
+                  EntryCard(
+                    darkModeActive: darkModeActive,
+                    onPress: () {},
+                  ),
+                  EntryCard(
+                    darkModeActive: darkModeActive,
+                    onPress: () {},
+                  ),
+                  EntryCard(
+                    darkModeActive: darkModeActive,
+                    onPress: () {},
+                  ),
+                  EntryCard(
+                    darkModeActive: darkModeActive,
+                    onPress: () {},
+                  ),
+                  EntryCard(
+                    darkModeActive: darkModeActive,
+                    onPress: () {},
+                  ),
                 ],
               ),
             ),
